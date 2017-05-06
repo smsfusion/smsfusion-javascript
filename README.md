@@ -61,7 +61,7 @@ api_key.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['key'] = "Token"
 
-var api = new SmsFusionApi.DefaultApi()
+var api = new SmsFusionApi.HLRApi()
 
 var key = "key_example"; // {String} API Key as generated from the <a href='https://www.smsfusion.com.au/admin/api/'>admin panel</a>
 
@@ -84,12 +84,13 @@ api.getHLR(key, num, opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.smsfusion.com.au/*
+All URIs are relative to *https://api.smsfusion.com.au/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SmsFusionApi.DefaultApi* | [**getHLR**](docs/DefaultApi.md#getHLR) | **GET** /hlr/ | HLR number lookup
-*SmsFusionApi.DefaultApi* | [**getHLRCallback**](docs/DefaultApi.md#getHLRCallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SmsFusionApi.HLRApi* | [**getHLR**](docs/HLRApi.md#getHLR) | **GET** /hlr/ | HLR number lookup
+*SmsFusionApi.HLRApi* | [**getHLRCallback**](docs/HLRApi.md#getHLRCallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SmsFusionApi.SMSApi* | [**sendSMS**](docs/SMSApi.md#sendSMS) | **GET** /sms/ | Send an SMS
 
 
 ## Documentation for Models
@@ -98,6 +99,7 @@ Class | Method | HTTP request | Description
  - [SmsFusionApi.HLRError](docs/HLRError.md)
  - [SmsFusionApi.HLRResult](docs/HLRResult.md)
  - [SmsFusionApi.OutOfCredit](docs/OutOfCredit.md)
+ - [SmsFusionApi.SMSResult](docs/SMSResult.md)
 
 
 ## Documentation for Authorization

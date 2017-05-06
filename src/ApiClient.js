@@ -44,9 +44,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default http://api.smsfusion.com.au/
+     * @default https://api.smsfusion.com.au/
      */
-    this.basePath = 'http://api.smsfusion.com.au/'.replace(/\/+$/, '');
+    this.basePath = 'https://api.smsfusion.com.au/'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.

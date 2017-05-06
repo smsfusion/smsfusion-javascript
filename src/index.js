@@ -14,12 +14,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HLRCallback', 'model/HLRError', 'model/HLRResult', 'model/OutOfCredit', 'api/DefaultApi'], factory);
+    define(['ApiClient', 'model/HLRCallback', 'model/HLRError', 'model/HLRResult', 'model/OutOfCredit', 'model/SMSResult', 'api/HLRApi', 'api/SMSApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/HLRCallback'), require('./model/HLRError'), require('./model/HLRResult'), require('./model/OutOfCredit'), require('./api/DefaultApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/HLRCallback'), require('./model/HLRError'), require('./model/HLRResult'), require('./model/OutOfCredit'), require('./model/SMSResult'), require('./api/HLRApi'), require('./api/SMSApi'));
   }
-}(function(ApiClient, HLRCallback, HLRError, HLRResult, OutOfCredit, DefaultApi) {
+}(function(ApiClient, HLRCallback, HLRError, HLRResult, OutOfCredit, SMSResult, HLRApi, SMSApi) {
   'use strict';
 
   /**
@@ -80,10 +80,20 @@
      */
     OutOfCredit: OutOfCredit,
     /**
-     * The DefaultApi service constructor.
-     * @property {module:api/DefaultApi}
+     * The SMSResult model constructor.
+     * @property {module:model/SMSResult}
      */
-    DefaultApi: DefaultApi
+    SMSResult: SMSResult,
+    /**
+     * The HLRApi service constructor.
+     * @property {module:api/HLRApi}
+     */
+    HLRApi: HLRApi,
+    /**
+     * The SMSApi service constructor.
+     * @property {module:api/SMSApi}
+     */
+    SMSApi: SMSApi
   };
 
   return exports;
